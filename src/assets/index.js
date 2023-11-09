@@ -25,12 +25,19 @@ import cts from "./company/cts.png";
 import mit from "./company/mit.png";
 import school from "./company/school.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import instagram from "./instagram-logo.png";
+
+import moodya from "./moody1.jpeg";
+import moodyb from "./moody2.jpeg";
+import moodyc from "./moody3.jpg";
 
 export {
+
+  moodya,
+  moodyb,
+  moodyc,
   logo,
+  instagram,
   backend,
   creator,
   mobile,
@@ -54,7 +61,4 @@ export {
   cts,
   mit,
   school,
-  carrent,
-  jobit,
-  tripguide,
 };

@@ -15,13 +15,14 @@ import {
   git,
   figma,
   docker,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   cts,
   school,
   mit,
+  moodya,
+  moodyb,
+  moodyc,
+
 } from "../assets";
 
 export const navLinks = [
@@ -193,67 +194,67 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Old Delhi-पुरानी दिल्ली",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Humayun's Tomb: A 16th-century Mughal Architectural Masterpiece, where love and artistry intertwine, inspiring the Taj Mahal's grandeur.",
     tags: [
       {
-        name: "react",
+        name: "travel",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "photography",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "architecture",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: moodya,
+    source_code_link: "https://www.instagram.com/moodyadi/com/",
   },
   {
-    name: "Job IT",
+    name: "Hopeful Bloom",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
+        name: "solitude Bloom",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "minimalism",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "surrealart",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: moodyb,
+    source_code_link: "https://www.instagram.com/moodyadi/com/",
   },
   {
-    name: "Trip Guide",
+    name: "Ethereal Mistfleet",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "yamuna ghat",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "winter",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "art of visuals",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: moodyc,
+    source_code_link: "https://www.instagram.com/moodyadi/com/",
   },
 ];
 

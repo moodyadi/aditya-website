@@ -1,35 +1,82 @@
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-//import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const logos = [
+    { src: "/src/assets/instagram-logo.png", alt: "instagram" },
+    { src: "/src/assets/linkedin-logo.png", alt: "linkedin" },
+    { src: "/src/assets/twitter-logo.png", alt: "twitter" },
+    { src: "/src/assets/github.png", alt: "github" },
+  ];
+
+  const handleLogoClick = (index) => {
+    // Handle click event, e.g., change colors
+    console.log(`Logo ${index + 1} clicked`);
+  };
+
+  const slideInAnimation = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const popOutAnimation = {
+    whileTap: { scale: 1.2 },
+    whileHover: { scale: 1.2 },
+  };
+
+  const transitionOptions = {
+    duration: 2.0, // Adjust the duration to slow down or speed up the animation
+    type: "spring", // You can use other easing functions like "easeInOut"
+  };
+
   return (
-
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
-
-        <div>
-        <span className='green-text-gradient' style={{ fontSize: '20px', marginRight: '5px' }}>
-              Hello There, I'm
-        </span>{' '}
-          <h1 className={`${styles.heroHeadText} text-white`} style={{ marginBottom: '5px' }}>
-            <span className='blue-text-gradient'>Aditya</span>
+    <section className={`relative w-full h-screen mx-auto flex items-center justify-center`}>
+      <div className={`max-w-7xl ${styles.paddingX} flex flex-col items-center gap-5`}>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={slideInAnimation}
+          className='flex flex-col justify-center items-center'
+        >
+          <span className='green-text-gradient' style={{ fontSize: '20px', marginBottom: '5px', textAlign: 'center' }}>
+            Hello There, I'm
+          </span>
+          <h1 className={`${styles.heroHeadText} text-white`} style={{ marginBottom: '5px', textAlign: 'center' }}>
+            <span className='blue-text-gradient'>Aditya Chavan</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-50 text-sm`}>
-            Web Developer, DevOps & Cloud Enthusiast<br className='hidden sm:inline' />
-            <br className='hidden sm:inline' />
-          </p>
+        </motion.div>
+        
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          variants={slideInAnimation}
+          className={`${styles.heroSubText} mt-2 text-white-50 text-sm text-center`}
+        >
+          Web Developer, DevOps & Cloud Enthusiast<br className='hidden sm:inline' />
+          <br className='hidden sm:inline' />
+        </motion.p>
+
+        <div className='flex justify-around items-center'>
+          {logos.map((logo, index) => (
+            <motion.div
+              key={index}
+              whileTap={popOutAnimation.whileTap}
+              whileHover={popOutAnimation.whileHover}
+              onClick={() => handleLogoClick(index)}
+              style={{ margin: '5px' }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={transitionOptions}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className='w-16 h-16 object-cover rounded-full'
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
-
-
     </section>
   );
 };
