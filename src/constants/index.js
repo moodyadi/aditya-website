@@ -15,14 +15,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  cts,
+  school,
+  mit,
 } from "../assets";
 
 export const navLinks = [
@@ -116,47 +115,43 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Programmer Analyst",
+    company_name: "Cognizant",
+    icon: cts,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2022 - Current",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I Work with and provide essential support for DevOps CI/CD tools such as GIT, Jenkins, OpenShift, Ansible, IBM UrbanCode, SonarQube, and troubleshoot issues as they arise.",
+      "Contribution in stable and efficient deployment and migration processes, ensuring minimal disruption to production systems",
+      "While working, I have diligently cultivated foundational expertise in key technologies and languages.",
+      "These include MERN (MongoDB, Express.js, React, Node.js), Apache HTTP Servers, AWS, Docker, SonarCloud, Kubernetes, and Jenkins.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Engineering Graduate",
+    company_name: "MIT AOE, Pune",
+    icon: mit,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Aug 2017 - Aug 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed UG Degree in Mechanical Engineering from Savitribai Phule University, Pune",
+      "CGPA: 7.57",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Higher & Secondary School",
+    company_name: "Maharastra State Board",
+    icon: school,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "June 2014  - June 2017",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed HSC (12th) with 86.56%",
+      "Completed SSC (10th) with 94.80%",
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
+  /*{
+    title: "Job Title",
+    company_name: "logoo",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
@@ -166,7 +161,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-  },
+  },*/
 ];
 
 const testimonials = [
