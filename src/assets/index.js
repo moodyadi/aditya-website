@@ -19,7 +19,6 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 
 import cts from "./company/cts.png";
 import mit from "./company/mit.png";
@@ -57,7 +56,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   cts,
   mit,
   school,

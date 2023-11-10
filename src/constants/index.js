@@ -15,7 +15,6 @@ import {
   git,
   figma,
   docker,
-  threejs,
   cts,
   school,
   mit,
@@ -97,10 +96,6 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
@@ -125,7 +120,7 @@ const experiences = [
       "I Work with and provide essential support for DevOps CI/CD tools such as GIT, Jenkins, OpenShift, Ansible, IBM UrbanCode, SonarQube, and troubleshoot issues as they arise.",
       "Contribution in stable and efficient deployment and migration processes, ensuring minimal disruption to production systems",
       "While working, I have diligently cultivated foundational expertise in key technologies and languages.",
-      "These include MERN (MongoDB, Express.js, React, Node.js), Apache HTTP Servers, AWS, Docker, SonarCloud, Kubernetes, and Jenkins.",
+      "These include MERN (MongoDB, Express.js, React, Node.js), Apache HTTP Servers and Nginx Servers, AWS, Docker, SonarCloud, Kubernetes, and Jenkins.",
     ],
   },
   {
