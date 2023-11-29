@@ -5,10 +5,54 @@
     <!-- Add the following link element to set the favicon -->
     <link rel="icon" type="image/png" href="/public/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      footer {
+        background-color: transparent;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: none; /* Initially hide the footer */
+        color: white;
+      }
+    </style>
     <title>Aditya Chavan</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Your page content goes here -->
+
+    <footer id="myFooter">
+      <div>
+        <span class="copyright-symbol">&#169;</span> 2024 Aditya Chavan
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      // Show the footer when reaching the end of the page
+      document.addEventListener('scroll', function () {
+        var footer = document.getElementById('myFooter');
+        var distanceFromTop = document.body.scrollHeight - window.innerHeight - window.scrollY;
+
+        if (distanceFromTop < 1) {
+          footer.style.display = 'block';
+        } else {
+          footer.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
