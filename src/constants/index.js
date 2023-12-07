@@ -212,7 +212,7 @@ const projects = [
   {
     name: "Hopeful Bloom",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A lone sunflower, whispers tales of hope and resilience. In solitude, it stands, a radiant symbol of beauty flourishing against endless horizons",
     tags: [
       {
         name: "solitude Bloom",
@@ -233,7 +233,7 @@ const projects = [
   {
     name: "Ethereal Mistfleet",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Within the hushed dawn mist by the riverside, casting a spell of enchantment. A poetic ballet of colors unfolds—a delicate dance on the canvas of winter waters.",
     tags: [
       {
         name: "yamuna ghat",

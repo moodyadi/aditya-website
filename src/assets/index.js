@@ -25,6 +25,8 @@ import mit from "./company/mit.png";
 import school from "./company/school.png";
 
 import instagram from "./instagram-logo.png";
+import linkedin from "./linkedin-logo.png";
+import twitter from "./twitter-logo.png";
 
 import moodya from "./moody1.jpeg";
 import moodyb from "./moody2.jpeg";
@@ -33,6 +35,8 @@ import moodyc from "./moody3.jpg";
 export {
 
   moodya,
+  linkedin,
+  twitter,
   moodyb,
   moodyc,
   logo,

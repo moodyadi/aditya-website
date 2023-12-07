@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { instagram, twitter, linkedin, github } from "../assets";
 
 const Hero = () => {
   const logos = [
-    { src: "/src/assets/instagram-logo.png", alt: "instagram" },
-    { src: "/src/assets/linkedin-logo.png", alt: "linkedin" },
-    { src: "/src/assets/twitter-logo.png", alt: "twitter" },
-    { src: "/src/assets/github.png", alt: "github" },
+    { src: instagram, alt: "instagram", link: "https://www.instagram.com/moodyadi/" },
+    { src: linkedin, alt: "linkedin", link: "https://www.linkedin.com/in/adityachavan27/" },
+    { src: twitter, alt: "twitter", link: "https://twitter.com/moodyadii" },
+    { src: github, alt: "github", link: "https://github.com/moodyadi" },
   ];
 
   const handleLogoClick = (index) => {
@@ -58,8 +59,11 @@ const Hero = () => {
 
         <div className='flex justify-around items-center'>
           {logos.map((logo, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={logo.link}
+              target="_blank"
+              rel="noopener noreferrer"
               whileTap={popOutAnimation.whileTap}
               whileHover={popOutAnimation.whileHover}
               onClick={() => handleLogoClick(index)}
@@ -73,7 +77,7 @@ const Hero = () => {
                 alt={logo.alt}
                 className='w-16 h-16 object-cover rounded-full'
               />
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
