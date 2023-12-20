@@ -12,6 +12,14 @@ const styles = {
     "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+
+  // New styles for mobile
+  "@media only screen and (max-width: 640px)": {
+    heroHeadText: "font-black text-white text-[32px] leading-[40px] mt-2",
+    heroSubText: "text-[#dfd9ff] font-medium text-[18px] leading-[26px]",
+    sectionHeadText: "text-white font-black text-[24px] leading-[30px]",
+    sectionSubText: "text-[14px]",
+  },
 };
 
 export { styles };

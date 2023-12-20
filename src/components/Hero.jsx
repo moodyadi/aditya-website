@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { instagram, twitter, linkedin, github } from "../assets";
-import resumePDF from "../assets/AdityaChavan-Resume.pdf"; // Update with the correct path
+import resumePDF from "../assets/AdityaChavan-Resume.pdf";
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -42,8 +42,7 @@ const Hero = () => {
       if (index <= targetText.length) {
         setTimeout(() => typeText(index + 1), 100);
       } else {
-        // After completing the text, restart from the beginning
-        setTimeout(() => typeText(0), 1000); // Adjust the delay before restarting
+        setTimeout(() => typeText(0), 1000);
       }
     };
 
@@ -51,8 +50,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={`relative w-full h-screen mx-auto flex items-center justify-center`}>
+    <section className={`relative w-full mx-auto flex items-center justify-center ${styles.padding}`}>
       <div className={`max-w-7xl ${styles.paddingX} flex flex-col items-center gap-5`}>
+
         <motion.div
           initial="hidden"
           animate="visible"
@@ -103,12 +103,12 @@ const Hero = () => {
         {/* Download button for the resume */}
         <motion.a
           href={resumePDF}
-          download="AdityaChavan_Resume.pdf"
+          download="AdityaChavan-Resume.pdf"
           style={{ margin: '10px' }}
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: [0, 1], y: [50, 0], transition: transitionOptions }}
           transition={transitionOptions}
-          target="_blank" // Open the link in a new tab
+          target="_blank"
           whileHover={popOutAnimation.whileHover}
         >
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
