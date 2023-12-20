@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { instagram, twitter, linkedin, github } from "../assets";
+import resumePDF from "../assets/AdityaChavan-Resume.pdf"; // Update with the correct path
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const logos = [
@@ -11,7 +13,6 @@ const Hero = () => {
   ];
 
   const handleLogoClick = (index) => {
-    // Handle click event, e.g., change colors
     console.log(`Logo ${index + 1} clicked`);
   };
 
@@ -22,13 +23,32 @@ const Hero = () => {
 
   const popOutAnimation = {
     whileTap: { scale: 1.2 },
-    whileHover: { scale: 1.2 },
+    whileHover: { scale: [1, 1.2, 1], transition: { duration: 0.5, repeat: Infinity } },
   };
 
   const transitionOptions = {
-    duration: 2.0, // Adjust the duration to slow down or speed up the animation
-    type: "spring", // You can use other easing functions like "easeInOut"
+    duration: 2.0,
+    type: "spring",
   };
+
+  const [typedText, setTypedText] = useState('');
+
+  useEffect(() => {
+    const targetText = "Web Developer, DevOps & Cloud Enthusiast";
+
+    const typeText = (index) => {
+      setTypedText(targetText.substring(0, index));
+
+      if (index <= targetText.length) {
+        setTimeout(() => typeText(index + 1), 100);
+      } else {
+        // After completing the text, restart from the beginning
+        setTimeout(() => typeText(0), 1000); // Adjust the delay before restarting
+      }
+    };
+
+    typeText(0);
+  }, []);
 
   return (
     <section className={`relative w-full h-screen mx-auto flex items-center justify-center`}>
@@ -46,16 +66,15 @@ const Hero = () => {
             <span className='blue-text-gradient'>Aditya Chavan</span>
           </h1>
         </motion.div>
-        
-        <motion.p
+
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={slideInAnimation}
           className={`${styles.heroSubText} mt-2 text-white-50 text-sm text-center`}
         >
-          Web Developer, DevOps & Cloud Enthusiast<br className='hidden sm:inline' />
-          <br className='hidden sm:inline' />
-        </motion.p>
+          {typedText}
+        </motion.div>
 
         <div className='flex justify-around items-center'>
           {logos.map((logo, index) => (
@@ -80,6 +99,22 @@ const Hero = () => {
             </motion.a>
           ))}
         </div>
+
+        {/* Download button for the resume */}
+        <motion.a
+          href={resumePDF}
+          download="AdityaChavan_Resume.pdf"
+          style={{ margin: '10px' }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={transitionOptions}
+          target="_blank" // Open the link in a new tab
+          whileHover={popOutAnimation.whileHover}
+        >
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Download Resume
+          </button>
+        </motion.a>
       </div>
     </section>
   );
