@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { instagram, twitter, linkedin, github } from "../assets";
-import resumePDF from "../assets/AdityaChavan-Resume.pdf";
+import resumePDF from "../assets/AdityaChavan-Resume.pdf"; // Update with the correct path
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -42,7 +42,8 @@ const Hero = () => {
       if (index <= targetText.length) {
         setTimeout(() => typeText(index + 1), 100);
       } else {
-        setTimeout(() => typeText(0), 1000);
+        // After completing the text, restart from the beginning
+        setTimeout(() => typeText(0), 1000); // Adjust the delay before restarting
       }
     };
 
@@ -50,9 +51,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={`relative w-full mx-auto flex items-center justify-center ${styles.padding}`}>
+    <section className={`relative w-full h-screen mx-auto flex items-center justify-center`}>
       <div className={`max-w-7xl ${styles.paddingX} flex flex-col items-center gap-5`}>
-
         <motion.div
           initial="hidden"
           animate="visible"
@@ -108,7 +108,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: [0, 1], y: [50, 0], transition: transitionOptions }}
           transition={transitionOptions}
-          target="_blank"
+          target="_blank" // Open the link in a new tab
           whileHover={popOutAnimation.whileHover}
         >
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
