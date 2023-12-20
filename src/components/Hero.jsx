@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { instagram, twitter, linkedin, github } from "../assets";
-import resumePDF from "../assets/AdityaChavan-Resume.pdf"; // Update with the correct path
+import { instagram, twitter, linkedin, github } from "../assets"; // Update with the correct path for scroll.gif
 import { useEffect, useState } from 'react';
+import { Link as ScrollLink } from "react-scroll";
+import scrollGif from "../assets/scroll.gif";
 
 const Hero = () => {
   const logos = [
@@ -42,8 +43,7 @@ const Hero = () => {
       if (index <= targetText.length) {
         setTimeout(() => typeText(index + 1), 100);
       } else {
-        // After completing the text, restart from the beginning
-        setTimeout(() => typeText(0), 1000); // Adjust the delay before restarting
+        setTimeout(() => typeText(0), 1000);
       }
     };
 
@@ -100,21 +100,14 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Download button for the resume */}
-        <motion.a
-          href={resumePDF}
-          download="AdityaChavan-Resume.pdf"
-          style={{ margin: '10px' }}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: [0, 1], y: [50, 0], transition: transitionOptions }}
-          transition={transitionOptions}
-          target="_blank" // Open the link in a new tab
-          whileHover={popOutAnimation.whileHover}
-        >
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Download Resume
-          </button>
-        </motion.a>
+        <ScrollLink to="about" smooth={true} duration={500} offset={-50} spy={true} exact="true">
+          <motion.img
+            src={scrollGif}
+            alt="Scroll Icon"
+            className="w-16 h-16 object-contain cursor-pointer mt-4"
+            whileHover={popOutAnimation.whileHover}
+          />
+        </ScrollLink>
       </div>
     </section>
   );
